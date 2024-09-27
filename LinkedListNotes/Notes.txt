@@ -1,0 +1,33 @@
+malloc() - requests a chunk of memory in bytes, returns a pointer, returns NULL if failed, must be released with free
+calloc() - intializes bits to 0
+realloc() - returns a pointer to new memory and frees the original
+# of calls to malloc()/calloc() must have equal amount to free() calls
+
+typedef struct node* nodePT;
+struct node
+{
+    int data;
+    struct node* next;
+};
+
+^AT TOP OF EVERYTHING^
+
+nodePT L=NULL;
+L = (nodePT)malloc(sizeof(struct node));
+free (L);
+
+static memory is allocated befire program starts executing
+dynamic memory starts allocating during program execution
+
+S= int n =10;
+D = malloc()
+
+dynamic memory is unnamed
+
+struct node* A;
+struct node* B = malloc(sizeof(struct node);
+A=B;
+B->next = A;
+
+loop to iterate through all nodes in the list
+for(current=L; current!=NULL;current=current->next)
